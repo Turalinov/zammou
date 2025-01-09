@@ -469,12 +469,11 @@ button {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  min-height: 2500px;
+  min-height: 100%;
 }
 
 .wrapper__content {
   flex: 1;
-  min-height: 2500px;
 }
 
 .container {
@@ -707,6 +706,8 @@ button {
 }
 
 .card__develop-photo a {
+  font-family: "ltsuperior", sans-serif;
+  font-weight: 600;
   text-decoration: none;
   color: var(--clr-black-light);
 }
@@ -1019,7 +1020,6 @@ button {
 .form__error {
   font-size: 14px;
   color: #ff0404;
-  max-width: 320px;
   opacity: 0;
   visibility: hidden;
   height: 0;
@@ -1066,11 +1066,29 @@ button {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--clr-white);
+    background-color: var(--clr-black);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 200;
+  }
+  .header.active .logo__img--desktop {
+    display: block;
+  }
+}
+@media screen and (max-width: 992px) and (max-width: 992px) {
+  .header.active .logo__img--desktop {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .header.active .logo__img--mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) and (max-width: 992px) {
+  .header.active .logo__img--mobile {
+    display: block;
   }
 }
 
@@ -1086,32 +1104,41 @@ button {
   }
 }
 
-.header__dropdown {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 @media screen and (max-width: 992px) {
   .header__dropdown {
-    padding: 82px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: 100px 0 80px;
     position: fixed;
     left: 0;
     right: 0;
     top: -150%;
     height: 100%;
-    z-index: 100;
     overflow: auto;
     transition: all 0.5s ease;
     background-color: var(--clr-white);
   }
 }
 
+.header__dropdown-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 992px) {
+  .header__dropdown-inner {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
 .header.active .header__dropdown {
   top: 0px;
+}
+@media screen and (max-width: 992px) {
+  .header.active .header__dropdown {
+    background-color: var(--clr-black);
+  }
 }
 
 .header__menu {
@@ -1125,7 +1152,7 @@ button {
 @media screen and (max-width: 992px) {
   .header__menu {
     margin-left: 0;
-    margin-top: 30px;
+    margin-bottom: 56px;
   }
 }
 
@@ -2669,10 +2696,21 @@ button {
   }
 }
 
+.logo__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.logo__img--mobile {
+  display: none;
+}
+
 .menu ul {
   display: flex;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .menu ul {
     flex-direction: column;
     align-items: center;
@@ -2687,10 +2725,10 @@ button {
     margin-left: 20px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .menu ul li + li {
     margin-left: 0;
-    margin-top: 10px;
+    margin-top: 42px;
   }
 }
 
@@ -2703,6 +2741,95 @@ button {
   .menu ul li a {
     font-size: 14px;
   }
+}
+@media screen and (max-width: 992px) {
+  .menu ul li a {
+    color: var(--clr-white);
+  }
+}
+
+.notfound {
+  padding: 150px 0;
+}
+
+.notfound__content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.notfound__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.notfound__btn {
+  display: block;
+  text-align: center;
+  font-family: "ltsuperior", sans-serif;
+  font-weight: 600;
+  padding: 20px 60px;
+  background-color: var(--clr-green);
+  color: var(--clr-green-dark);
+  border-radius: 16px;
+  text-decoration: none;
+  display: block;
+  max-width: 370px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .notfound__btn {
+    max-width: 320px;
+    border-radius: 4px;
+  }
+}
+
+.politics {
+  padding: 100px 0 100px;
+}
+@media screen and (max-width: 768px) {
+  .politics {
+    font-size: 16px;
+    padding: 80px 0 50px;
+  }
+}
+
+.politics p {
+  margin: 20px 0;
+}
+
+.politics h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1180px) {
+  .politics h2 {
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .politics h2 {
+    font-size: 30px;
+  }
+}
+
+.politics h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.politics ul li {
+  list-style: initial;
+  margin-left: 15px;
+}
+
+.politics ul li + li {
+  margin-top: 15px;
+}
+
+.politics a {
+  font-family: "ltsuperior", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--clr-green-dark);
 }
 
 .socials {
@@ -2816,19 +2943,13 @@ button {
   display: flex;
   align-items: center;
 }
-@media screen and (max-width: 768px) {
-  .swithces {
-    flex-direction: column;
-  }
-}
 
 .swithces__item + .swithces__item {
   margin-left: -22px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .swithces__item + .swithces__item {
-    margin-left: 0;
-    margin-top: 10px;
+    margin-left: -25px;
   }
 }
 
@@ -2844,7 +2965,7 @@ button {
 @media screen and (max-width: 1180px) {
   .swithces__link {
     font-size: 12px;
-    padding: 7px 12px 7px 25px;
+    padding: 9px 14px 7px 30px;
   }
 }
 .swithces__link::after {
@@ -2863,9 +2984,14 @@ button {
 }
 @media screen and (max-width: 1180px) {
   .swithces__link::after {
-    left: 9px;
-    width: 10px;
-    height: 7.39px;
+    left: 12px;
+    width: 13px;
+    height: 10px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .swithces__link::after {
+    background-image: url("../img/switches-icon-black.svg");
   }
 }
 
@@ -2877,8 +3003,48 @@ button {
   background-color: var(--clr-black);
   color: var(--clr-white);
 }
+@media screen and (max-width: 992px) {
+  .swithces__item.active .swithces__link {
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+  }
+}
 .swithces__item.active .swithces__link::after {
   opacity: 1;
+}
+
+.thanks {
+  padding: 150px 0;
+}
+
+.thanks__content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 992px) {
+  .thanks__content {
+    max-width: 400px;
+  }
+}
+
+.thanks__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.thanks__desc {
+  text-align: center;
+  font-size: 24px;
+}
+@media screen and (max-width: 992px) {
+  .thanks__desc {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .thanks__desc {
+    font-size: 16px;
+  }
 }
 
 .tickets {
@@ -2995,6 +3161,19 @@ button {
   justify-content: center;
   transition: all 0.5s;
   border-radius: 4px;
+}
+
+@media screen and (max-width: 992px) {
+  .toggle.active {
+    background-color: var(--clr-white);
+  }
+}
+@media screen and (max-width: 992px) {
+  .toggle.active .toggle__button::after,
+  .toggle.active .toggle__button::before,
+  .toggle.active .toggle__button > span {
+    background-color: var(--clr-black);
+  }
 }
 
 .toggle__button {

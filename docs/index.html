@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
@@ -13,7 +13,23 @@
   <title>Main | Zammou consulting</title>
 
 
-  <!-- favicon  -->
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 
 </head>
 
@@ -28,38 +44,41 @@
     <!-- logo  -->
     <div class="header__logo logo">
       <a href="index.html" class="logo__link">
-        <img src="img/logo.svg" class="logo__img" width="133" height="54">
+        <img src="img/logo.svg" class="logo__img logo__img--desktop" width="133" height="54">
+        <img src="img/logo-light.svg" class="logo__img logo__img--mobile" width="133" height="54">
       </a>
     </div>
 
     <!-- dropdown -->
     <div class="header__dropdown">
-      <!-- two buttons  -->
-      <ul class="header__switches swithces">
-        <li class="swithces__item active">
-          <a href="index.html" class="swithces__link">Booster mon entreprise</a>
-        </li>
-        <li class="swithces__item">
-          <a href="index2.html" class="swithces__link">Booster ma carrière</a>
-        </li>
-      </ul>
-      <!-- menus -->
-      <nav class="header__menu menu">
-        <ul>
-          <li>
-            <a href="#">Défis RH</a>
+      <div class="header__dropdown-inner">
+        <!-- two buttons  -->
+        <ul class="header__switches swithces">
+          <li class="swithces__item active">
+            <a href="index.html" class="swithces__link">Booster mon entreprise</a>
           </li>
-          <li>
-            <a href="#">Solutions</a>
-          </li>
-          <li>
-            <a href="#">Business cases</a>
-          </li>
-          <li>
-            <a href="#">Témoignages</a>
+          <li class="swithces__item">
+            <a href="index2.html" class="swithces__link">Booster ma carrière</a>
           </li>
         </ul>
-      </nav>
+        <!-- menus -->
+        <nav class="header__menu menu">
+          <ul>
+            <li>
+              <a href="#solution">Défis RH</a>
+            </li>
+            <li>
+              <a href="#decision">Solutions</a>
+            </li>
+            <li>
+              <a href="#cases">Business cases</a>
+            </li>
+            <li>
+              <a href="#reviews">Témoignages</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
 
     <div class="header__btns">
@@ -71,7 +90,7 @@
       </div>
 
       <!-- link button scroll - forms section -->
-      <a href="#" class="header__btn">Audit RH offert</a>
+      <a href="#footer" class="header__btn">Audit RH offert</a>
 
     </div>
 
@@ -86,7 +105,7 @@
         <div class="hero__desc">Réinventons ensemble vos pratiques RH pour une efficacité business immédiate.
           <span>Ready?</span>
         </div>
-        <a href="#" class="hero__btn">Echangeons ensemble</a>
+        <a href="#footer" class="hero__btn">Echangeons ensemble</a>
         <div class="hero__stats stats">
           <div class="stats__item">
             <strong>15</strong>
@@ -112,7 +131,7 @@
     </div>
   </div>
 </section>
-      <section class="solution">
+      <section class="solution" id="solution">
   <div class="container">
     <div class="solution__content">
       <div class="solution__left">
@@ -238,12 +257,12 @@
           pragmatiques adaptées à votre
           entreprise.
         </div>
-        <a href="#" class="reserve__btn">Je prends un rdv</a>
+        <a href="#footer" class="reserve__btn">Je prends un rdv</a>
       </div>
     </div>
   </div>
 </section>
-      <section class="decision">
+      <section class="decision" id="decision">
   <div class="container">
     <div class="decision__inner">
       <h2 class="decision__title">
@@ -302,14 +321,14 @@
               prendrai le temps
               de comprendre vos défis spécifiques et de vous proposer des solutions sur mesure
             </div>
-            <a href="#" class="decision__btn">Consultation offerte</a>
+            <a href="#footer" class="decision__btn">Consultation offerte</a>
           </div>
         </li>
       </ul>
     </div>
   </div>
 </section>
-      <section class="cases">
+      <section class="cases" id="cases">
   <div class="container">
     <div class="cases__content">
       <div class="cases__left">
@@ -475,10 +494,10 @@
         <!-- socials -->
         <ul class="who__socials socials">
           <li class="socials__item socials__item--inst">
-            <a href="#" class="socials__link" target="_blank">Instagram</a>
+            <a href="https://www.instagram.com/zammou_consulting" class="socials__link" target="_blank">Instagram</a>
           </li>
           <li class="socials__item socials__item--linked">
-            <a href="#" class="socials__link" target="_blank">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/najetzammou/" class="socials__link" target="_blank">LinkedIn</a>
           </li>
         </ul>
       </div>
@@ -556,7 +575,7 @@
             <img src="img/cases.png" alt="" class="trust__img">
           </div><!-- slide  -->
           <div class="swiper-slide trust__slide">
-            <img src="img/who.png" alt="" class="trust__img">
+            <img src="img/cases.png" alt="" class="trust__img">
           </div><!-- slide  -->
           <div class="swiper-slide trust__slide">
             <img src="img/cases.png" alt="" class="trust__img">
@@ -575,7 +594,7 @@
     </div>
   </div>
 </section>
-      <section class="reviews">
+      <section class="reviews" id="reviews">
   <div class="container">
     <div class="reviews__inner">
       <h2 class="reviews__title">Ce qu’ils<br class="br-mobile"> disent de mon <span class="br-desktop">
@@ -685,7 +704,7 @@
               </div>
             </div>
             <div class="join__bottom">
-              <a href="#" class="join__bottom-link">Envoyer LinkedIn</a>
+              <a href="https://www.linkedin.com/in/najetzammou/" class="join__bottom-link">Envoyer LinkedIn</a>
             </div>
           </div>
         </li>
@@ -709,7 +728,7 @@
               </div>
             </div>
             <div class="join__bottom">
-              <a href="#" class="join__bottom-link">Envoyer Instagram</a>
+              <a href="https://www.instagram.com/zammou_consulting" class="join__bottom-link">Envoyer Instagram</a>
             </div>
           </div>
         </li>
@@ -722,7 +741,7 @@
 
     </div>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
   <div class="container">
     <div class="footer__inner">
       <!-- left  -->
@@ -768,8 +787,9 @@
                       Numéro de téléphone :
                     </div>
 
-                    <input type="text" class=" form__input js-phone js-required" name="telephone">
-
+                    <input type="text" class=" form__input js-phone js-required" name="telephone"
+                      placeholder="+__ (___) ___-____">
+                    <!-- 06 XX XX XX XX -->
                   </label>
                 </div>
                 <div class="form__col">
@@ -847,10 +867,10 @@
               </div>
               <div class="card__socials">
                 <div class="card__social card__social--insta">
-                  <a href="#" class="card__social-link">Instagram</a>
+                  <a href="https://www.instagram.com/zammou_consulting" class="card__social-link">Instagram</a>
                 </div>
                 <div class="card__social card__social--linked">
-                  <a href="#" class="card__social-link">Linkedin</a>
+                  <a href="https://www.linkedin.com/in/najetzammou/" class="card__social-link">Linkedin</a>
                 </div>
               </div>
             </div>
@@ -875,7 +895,8 @@
                 </a>
               </div>
               <div class="card__develop-photo">
-                Logo & Photos réalisés par <a href="#">____ ____</a>
+                Logo & Photos réalisés par <a href="https://www.instagram.com/reginavollaire" target="_blank">Regina
+                  Vollaire</a>
               </div>
             </div>
           </div>
