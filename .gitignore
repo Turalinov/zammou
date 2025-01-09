@@ -10,3 +10,5 @@ package.json
 .editorconfig
 PHPMailer
 action-form.php
+politics.html
+mentions.html
