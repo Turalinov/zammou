@@ -1213,6 +1213,10 @@ button {
   }
 }
 
+.wrapper__content--career .header .header__btn {
+  max-width: 136px;
+}
+
 .decision {
   min-height: 700px;
   background-color: var(--clr-gray);
@@ -1242,6 +1246,19 @@ button {
 }
 @media screen and (max-width: 768px) {
   .decision__title {
+    margin-bottom: 25px;
+  }
+}
+
+.decision__text {
+  text-align: center;
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 768px) {
+  .decision__text {
+    font-size: 16px;
+    margin-top: -20px;
     margin-bottom: 25px;
   }
 }
@@ -2748,8 +2765,17 @@ button {
   }
 }
 
+.wrapper__content--career .header .menu ul li a {
+  font-size: 14px;
+}
+@media screen and (max-width: 1100px) {
+  .wrapper__content--career .header .menu ul li a {
+    font-size: 10px;
+  }
+}
+
 .notfound {
-  padding: 150px 0;
+  padding: 230px 0 150px;
 }
 
 .notfound__content {
@@ -3014,7 +3040,7 @@ button {
 }
 
 .thanks {
-  padding: 150px 0;
+  padding: 230px 0 150px;
 }
 
 .thanks__content {
@@ -3119,6 +3145,10 @@ button {
   color: var(--clr-black);
 }
 
+.tickets__item:nth-child(1) .tickets__top-inner::after {
+  background-image: url("../img/solution-icon1.svg");
+}
+
 .tickets__item:nth-child(2) .tickets__top-inner::after {
   background-image: url("../img/solution-icon2.svg");
 }
@@ -3137,6 +3167,25 @@ button {
 
 .tickets__item:nth-child(6) .tickets__top-inner::after {
   background-image: url("../img/solution-icon6.svg");
+}
+
+.wrapper__content--career .tickets__item:nth-child(1) .tickets__top-inner::after {
+  background-image: url("../img/solution-career-icon3.svg");
+}
+.wrapper__content--career .tickets__item:nth-child(2) .tickets__top-inner::after {
+  background-image: url("../img/solution-career-icon2.svg");
+}
+.wrapper__content--career .tickets__item:nth-child(3) .tickets__top-inner::after {
+  background-image: url("../img/solution-career-icon4.svg");
+}
+.wrapper__content--career .tickets__item:nth-child(4) .tickets__top-inner::after {
+  background-image: url("../img/solution-career-icon1.svg");
+}
+.wrapper__content--career .tickets__item:nth-child(5) .tickets__top-inner::after {
+  background-image: url("../img/solution-career-icon5.svg");
+}
+.wrapper__content--career .tickets__item:nth-child(6) .tickets__top-inner::after {
+  background-image: url("../img/solution-career-icon6.svg");
 }
 
 .tickets__bottom {
