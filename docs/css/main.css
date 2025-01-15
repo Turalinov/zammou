@@ -438,7 +438,7 @@ h1 {
 h2 {
   font-family: "ltsuperior", sans-serif;
   font-weight: 600;
-  font-size: 60px;
+  font-size: 55px;
   line-height: 115%;
 }
 @media screen and (max-width: 768px) {
@@ -503,6 +503,16 @@ button {
   .container {
     margin: 0px 20px;
   }
+}
+
+._anim-items {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+._anim-items._active {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .br-desktop {
@@ -960,7 +970,7 @@ button {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  min-height: 432px;
+  min-height: 447px;
 }
 @media screen and (max-width: 992px) {
   .form__inner {
@@ -1042,6 +1052,10 @@ button {
   resize: none;
   height: 37px;
   overflow: hidden;
+}
+
+.wrapper__content--career ~ .footer .form__input--textarea {
+  height: 95px;
 }
 
 .form__error {
@@ -1552,7 +1566,7 @@ button {
   padding-left: 59px;
   font-size: 20px;
   margin-bottom: 38px;
-  position: relative;
+  transition-delay: 0.2s;
 }
 @media screen and (max-width: 992px) {
   .hero__desc {
@@ -1613,6 +1627,7 @@ button {
   width: 293px;
   position: relative;
   margin-bottom: 55px;
+  transition-delay: 0.4s;
 }
 @media screen and (max-width: 992px) {
   .hero__btn {
@@ -1696,7 +1711,7 @@ button {
 }
 
 .join {
-  padding: 80px 0 70px;
+  padding: 50px 0 70px;
 }
 @media screen and (max-width: 768px) {
   .join {
@@ -2047,7 +2062,7 @@ button {
 }
 
 .reviews {
-  padding: 50px 0 80px;
+  padding: 50px 0 50px;
 }
 @media screen and (max-width: 768px) {
   .reviews {
@@ -2152,7 +2167,6 @@ button {
 .reviews__bottom {
   display: flex;
   align-items: flex-start;
-  max-width: 320px;
   width: 100%;
 }
 
@@ -2771,7 +2785,7 @@ button {
 .logo__img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
